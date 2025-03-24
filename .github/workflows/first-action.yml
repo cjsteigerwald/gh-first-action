@@ -11,11 +11,11 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Load Env Variables
-        run: cat ../../../env.yaml >> $GITHUB_ENV
+      # - name: Load Env Variables
+      #   run: cat ../../../env.yaml >> $GITHUB_ENV
       - name: Print greeting
         run: echo "Hello World"
       - name: Print goodbye
         run: echo "Done - bye!"
       - name: Test if works
-        run: echo $variables.motsId
+        run: echo ${{ env.CONFIG_DIRECTORY }}
