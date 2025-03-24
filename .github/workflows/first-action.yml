@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Load Env Variables
-        run: cat env.yaml >> $GITHUB_ENV
+        run: cat ../../../env.yaml >> $GITHUB_ENV
       - name: Print greeting
         run: echo "Hello World"
       - name: Print goodbye
