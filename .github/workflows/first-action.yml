@@ -3,7 +3,7 @@
 name: First Workflow
 
 # Controls when the workflow will run
-on: workflow_dispatch
+on: push
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,4 +24,4 @@ jobs:
       - name: list files in workspace
         run: ls -la ${{ github.workspace }}
       - name: list files in GITHUB_WORKSPACE
-        run: ls -la $GITHUB_WORKSPACE
+        run: ls -la /home/runner/work/$GITHUB_REPOSITORY
