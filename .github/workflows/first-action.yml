@@ -13,6 +13,8 @@ jobs:
     steps:
       # - name: Load Env Variables
       #   run: cat ../../../env.yaml >> $GITHUB_ENV
+      - name: Get code
+        uses: actions/checkout@v3
       - name: Print greeting
         run: echo "Hello World"
       - name: Print goodbye
@@ -20,4 +22,4 @@ jobs:
       - name: Test if works
         run: echo ${{ github.workspace }}
       - name: list files in workspace
-        run: ls -l ${{ github.workspace }}
+        run: ls -la ${{ github.workspace }}
