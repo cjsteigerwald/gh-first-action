@@ -18,4 +18,6 @@ jobs:
       - name: Print goodbye
         run: echo "Done - bye!"
       - name: Test if works
-        run: echo ${{ env.CONFIG_DIRECTORY }}
+        run: echo ${{ github.workspace }}
+      - name: list files in workspace
+        run: ls -l ${{ github.workspace }}
